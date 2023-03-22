@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign Up</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Sign Up</h1>
+        <form method = "POST">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <input type = "submit" value = "Sign Up">
+        </form>
+
+        <p>Already a registered user? <a href = "{% url "login"%}">Click to Login</a></p>
+   </body>
+</html>
